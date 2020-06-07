@@ -1,0 +1,65 @@
+{
+  "extends": [
+    "tslint:all",
+    "tslint-config-airbnb",
+    "tslint-react"
+  ],
+  "rules": {
+    "array-type": [true, "array"],
+    "arrow-return-shorthand": true,
+    "comment-type": false,
+    "completed-docs": false,
+    "cyclomatic-complexity": false,
+    "file-name-casing": [false, "ignore"],
+    "increment-decrement": false,
+    "interface-name": [true, "never-prefix"],
+    "jsx-no-bind": false,
+    "jsx-no-lambda": false,
+    "match-default-export-name": false,
+    "member-access": false,
+    "member-ordering": false,
+    "no-default-export": false,
+    "no-default-import": false,
+    "no-dynamic-delete": false,
+    "no-import-side-effect": false,
+    "no-inferrable-types": false,
+    "no-inferred-empty-object-type": false,
+    "no-magic-numbers": [true, -1, 0, 1, 2, 12, 24, 60, 100, 1000, 1024],
+    "no-mergeable-namespace": false,
+    "no-null-keyword": false,
+    "no-redundant-jsdoc": false,
+    "no-restricted-globals": false,
+    "no-switch-case-fall-through": true,
+    "no-unnecessary-callback-wrapper": false,
+    "no-unnecessary-class": false,
+    "no-unsafe-any": false,
+    "object-literal-sort-keys": false,
+    "object-shorthand-properties-first": true,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "case-insensitive",
+        "module-source-path": "full",
+        "named-imports-order": "case-insensitive"
+      }
+    ],
+    "prefer-function-over-method": false,
+    "prefer-readonly": false,
+    "strict-boolean-expressions": false,
+    "strict-comparisons": [
+      true,
+      {
+        "allow-object-equal-comparison": true,
+        "allow-string-order-comparison": false
+      }
+    ],
+    "strict-string-expressions": false,
+    "switch-final-break": [true, "always"],
+    "typedef": false,
+    "no-submodule-imports": false,
+    "no-console": false,
+    "import-name": false,
+    "variable-name": false,
+    "pretttier": true
+  }
+}

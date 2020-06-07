@@ -1,34 +1,18 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import logo from './logo.svg';
-import { userSlicer} from './redux/user/slicer';
 import './App.css';
+import logoSvg from './logo.svg';
+import UserDetail from './UserDetail';
 
-const mapStateToProps = (state) => {
-  return {
-    username: userSlicer.getUsername(state),
-    birthdate: userSlicer.getBirthdate(state),
-  };
-};
-interface Props extends ReturnType<typeof mapStateToProps> {}
-function App(props: Props) {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          To Do APP:
-          How to use types and typescript in development
-        </p>
-        <p>
-          username: {props.username}
-        </p>
-        <p>
-          birthdate: {props.birthdate.toDateString()}
-        </p>
+        <img src={logoSvg} className="App-logo" alt="logo" />
+        <p>To Do APP: How to use types and typescript in development</p>
+        <UserDetail />
       </header>
     </div>
   );
-}
+};
 
-export default connect(mapStateToProps)(App);
+export default App;

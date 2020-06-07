@@ -7,22 +7,32 @@
     "@testing-library/react": "9.5.0",
     "@testing-library/user-event": "7.2.1",
     "@typegoose/typegoose": "7.2.0",
+    "axios": "0.19.2",
+    "body-parser": "1.19.0",
     "config": "3.3.1",
+    "express": "4.17.1",
     "mongoose": "5.9.18",
+    "nodemon": "2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "7.2.0",
     "react-scripts": "3.4.1",
     "redux": "4.0.5",
     "redux-devtools-extension": "2.13.8",
+    "redux-promise-middleware": "6.1.2",
     "redux-thunk": "2.3.0",
+    "ts-node": "8.10.2",
     "typescript": "3.7.5"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:server": "ts-node --project serverTsConfig.json ./server/index.ts",
+    "start:watch": "nodemon --watch server/**/* --exec \"npm run start:server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "tslint --project tsconfig.json --fix",
+    "prettier": "prettier --write \"{src,server,types}/**/*.{j,t}{s,sx}\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,11 +50,17 @@
     ]
   },
   "devDependencies": {
+    "@types/express": "4.17.6",
     "@types/jest": "24.9.1",
+    "@types/mongoose": "5.7.22",
     "@types/node": "12.12.42",
     "@types/react": "16.9.35",
     "@types/react-dom": "16.9.8",
     "@types/react-redux": "7.1.9",
-    "@types/redux": "3.6.0"
+    "@types/redux": "3.6.0",
+    "prettier": "2.0.5",
+    "tslint": "6.1.2",
+    "tslint-config-airbnb": "5.11.2",
+    "tslint-react": "5.0.0"
   }
 }
